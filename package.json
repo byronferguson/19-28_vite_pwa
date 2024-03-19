@@ -1,0 +1,25 @@
+{
+  "name": "mini-project-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "cd client && npm run build",
+    "start": "cd server && node server.js",
+    "start:dev": "concurrently \"npm run server:dev\" \"npm run client:dev\" -n server,client -c red,green",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "install": "concurrently \"npm run install:server\" \"npm run install:client\" -n server,client -c red,green",
+    "install:server": "cd server && npm i",
+    "install:client": "cd client && npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

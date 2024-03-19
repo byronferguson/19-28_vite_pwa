@@ -1,0 +1,22 @@
+{
+  "name": "Contact",
+  "type": "module",
+  "engines": {
+    "node": "^18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "rm -rf ./dist",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "2U",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.1.6",
+    "vite-plugin-pwa": "^0.19.4"
+  },
+  "dependencies": {
+    "idb": "^6.1.2"
+  }
+}
